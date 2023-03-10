@@ -1,30 +1,57 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <header class="sideIcons">
+    <div class="logo">
+      <img src="./assets/logo.png">
+    </div>
+    <nav class="navIcons">
+      <i class="fa-solid fa-house fa-2x"></i>
+      <i class="fa-solid fa-house fa-2x"></i>
+      <i class="fa-solid fa-house fa-2x"></i>
+      <i class="fa-solid fa-house fa-2x"></i>
+    </nav>
+  </header>
+  <router-view />
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
-nav {
-  padding: 30px;
+.sideIcons {
+  height: 100vh;
+  width: 55px;
+  background-color: blueviolet;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60px
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+.logo img {
+  height: 45%;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.37));
 }
+
+.navIcons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.navIcons i {
+  color: white;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.37));
+}
+
 </style>
